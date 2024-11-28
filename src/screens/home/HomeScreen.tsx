@@ -19,6 +19,7 @@ const HomeScreen = () => {
 export default HomeScreen;
 const Inbox = () => {
   const { i18n } = useLingui();
+
   useFocusEffect(
     useCallback(() => {
       dynamicActivate(AppLanguage.km);
@@ -34,14 +35,9 @@ const Inbox = () => {
           dynamicActivate(AppLanguage.en);
         }}
       >
-        <Text>{t(i18n)`Mark messages as read`}</Text>
-      </TouchableOpacity>
-      <TouchableOpacity
-        onPress={() => {
-          dynamicActivate(AppLanguage.km);
-        }}
-      >
-        <Text>{t(i18n)`Mark messages as read`}</Text>
+        <Text style={{ fontFamily: "SFProDisplay", fontSize: 40 }}>{t(
+          i18n
+        )`Mark messages as read`}</Text>
       </TouchableOpacity>
     </View>
   );
