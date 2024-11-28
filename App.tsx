@@ -1,20 +1,18 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { KeyboardProvider } from "react-native-keyboard-controller";
+import {
+  SafeAreaProvider,
+  initialWindowMetrics,
+} from "react-native-safe-area-context";
+import AppNavigation from "./src/AppNavigation";
+import QueryProvider from "./src/ctx/QueryProvider";
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <QueryProvider>
+      <KeyboardProvider>
+        <SafeAreaProvider initialMetrics={initialWindowMetrics}>
+          <AppNavigation />
+        </SafeAreaProvider>
+      </KeyboardProvider>
+    </QueryProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
