@@ -17,6 +17,11 @@ msgstr ""
 msgid "Mark messages as read"
 msgstr "Mark messages as read"
 
+#. js-lingui-explicit-id
 #: src/screens/home/HomeScreen.tsx:30
-msgid "Message Inbox"
+msgid "msg_inbox"
 msgstr "Message Inbox"
+
+#: src/screens/home/HomeScreen.tsx:30
+#~ msgid "Message Inbox"
+#~ msgstr "Message Inbox"

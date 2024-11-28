@@ -3,7 +3,7 @@ import { useLingui } from "@lingui/react";
 import { useFocusEffect } from "@react-navigation/native";
 
 import React, { useCallback } from "react";
-import { Button, Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import { dynamicActivate } from "../../locales/i18n";
 import { AppLanguage } from "../../locales/Language";
 
@@ -27,14 +27,22 @@ const Inbox = () => {
   return (
     <View>
       <Text>
-        <Trans>Message Inbox</Trans>
+        <Trans id="msg_inbox">Message Inbox</Trans>
       </Text>
-      <Button
-        title={t(i18n)`Mark messages as read`}
+      <TouchableOpacity
         onPress={() => {
           dynamicActivate(AppLanguage.en);
         }}
-      />
+      >
+        <Text>{t(i18n)`Mark messages as read`}</Text>
+      </TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          dynamicActivate(AppLanguage.km);
+        }}
+      >
+        <Text>{t(i18n)`Mark messages as read`}</Text>
+      </TouchableOpacity>
     </View>
   );
 };

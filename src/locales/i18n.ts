@@ -10,19 +10,19 @@ import { useEffect } from "react";
 import { AppLanguage } from "./Language";
 
 export async function dynamicActivate(locale: AppLanguage) {
-  const { messages } = await import(`./${locale}/messages.po`);
-
   switch (locale) {
     case AppLanguage.km: {
       await Promise.all([
         import("@formatjs/intl-pluralrules/locale-data/km"),
         import("@formatjs/intl-numberformat/locale-data/km"),
       ]);
+      const { messages } = await import(`./km/messages.po`);
       i18n.loadAndActivate({ locale, messages });
       break;
     }
 
     default: {
+      const { messages } = await import(`./en/messages.po`);
       i18n.loadAndActivate({ locale, messages });
       break;
     }
