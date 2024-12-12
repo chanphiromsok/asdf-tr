@@ -41,7 +41,7 @@
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.26.2.tgz#278b6b13664557de95b8f35b90d96785850bb56e"
   integrity sha512-Z0WgzSEa+aUcdiJuCIqgujCshpMWgUpgOxXotrYPSA53hA3qopNaqcJpyr0hVb1FeWdnqFA35/fUtXgBK8srQg==
 
-"@babel/core@^7.11.6", "@babel/core@^7.12.3", "@babel/core@^7.13.16", "@babel/core@^7.20.0", "@babel/core@^7.21.0", "@babel/core@^7.25.2", "@babel/core@^7.26.0":
+"@babel/core@^7.11.6", "@babel/core@^7.12.3", "@babel/core@^7.13.16", "@babel/core@^7.20.0", "@babel/core@^7.20.12", "@babel/core@^7.21.0", "@babel/core@^7.25.2", "@babel/core@^7.26.0":
   version "7.26.0"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.26.0.tgz#d78b6023cc8f3114ccf049eb219613f74a747b40"
   integrity sha512-i1SLeK+DzNnQ3LL/CswPCa/E5u4lh1k6IAEphON8F+cXt0t9euTshDru0q7/IqMa1PMPz5RnHuHscF8/ZJsStg==
@@ -1341,70 +1341,73 @@
     find-up "^5.0.0"
     js-yaml "^4.1.0"
 
-"@formatjs/ecma402-abstract@2.2.4":
-  version "2.2.4"
-  resolved "https://registry.yarnpkg.com/@formatjs/ecma402-abstract/-/ecma402-abstract-2.2.4.tgz#355e42d375678229d46dc8ad7a7139520dd03e7b"
-  integrity sha512-lFyiQDVvSbQOpU+WFd//ILolGj4UgA/qXrKeZxdV14uKiAUiPAtX6XAn7WBCRi7Mx6I7EybM9E5yYn4BIpZWYg==
+"@formatjs/ecma402-abstract@2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@formatjs/ecma402-abstract/-/ecma402-abstract-2.3.1.tgz#cdeb3ffe1aeea9c4284b85b7e37e8e8615314c39"
+  integrity sha512-Ip9uV+/MpLXWRk03U/GzeJMuPeOXpJBSB5V1tjA6kJhvqssye5J5LoYLc7Z5IAHb7nR62sRoguzrFiVCP/hnzw==
   dependencies:
-    "@formatjs/fast-memoize" "2.2.3"
-    "@formatjs/intl-localematcher" "0.5.8"
+    "@formatjs/fast-memoize" "2.2.5"
+    "@formatjs/intl-localematcher" "0.5.9"
+    decimal.js "10"
     tslib "2"
 
-"@formatjs/fast-memoize@2.2.3":
-  version "2.2.3"
-  resolved "https://registry.yarnpkg.com/@formatjs/fast-memoize/-/fast-memoize-2.2.3.tgz#74e64109279d5244f9fc281f3ae90c407cece823"
-  integrity sha512-3jeJ+HyOfu8osl3GNSL4vVHUuWFXR03Iz9jjgI7RwjG6ysu/Ymdr0JRCPHfF5yGbTE6JCrd63EpvX1/WybYRbA==
-  dependencies:
-    tslib "2"
-
-"@formatjs/intl-enumerator@1.8.4":
-  version "1.8.4"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-enumerator/-/intl-enumerator-1.8.4.tgz#ec7622a0f1c453e618f4b77fa43694f4a25c6ac4"
-  integrity sha512-VSFvvgrR/WpA6jIS6XxcGNB5dKlHXOme2KtR452/v4PoaVj/eg+QWUVeaVjWfx7R1Q18aC7TfHVVZ0XDlmgJbw==
-  dependencies:
-    "@formatjs/ecma402-abstract" "2.2.4"
-    tslib "2"
-
-"@formatjs/intl-getcanonicallocales@2.5.3":
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-getcanonicallocales/-/intl-getcanonicallocales-2.5.3.tgz#97bf9e536578c49836b6c74ab83b539f9148f2a4"
-  integrity sha512-I/OKMbzrwkD6sA4jsjRuIrCs7Zdzlw54WEBQTROU2545zx8gCV3X9987XxzH82kvQGgLcPAElUP7ul7cKJh53Q==
+"@formatjs/fast-memoize@2.2.5":
+  version "2.2.5"
+  resolved "https://registry.yarnpkg.com/@formatjs/fast-memoize/-/fast-memoize-2.2.5.tgz#54a4a1793d773b72c372d3dcab3595149aee7880"
+  integrity sha512-6PoewUMrrcqxSoBXAOJDiW1m+AmkrAj0RiXnOMD59GRaswjXhm3MDhgepXPBgonc09oSirAJTsAggzAGQf6A6g==
   dependencies:
     tslib "2"
 
-"@formatjs/intl-locale@^4.2.5":
-  version "4.2.5"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-locale/-/intl-locale-4.2.5.tgz#017e5ab77f020a357706e0605c708b731dea47c4"
-  integrity sha512-XIh6qdaGIVWXGDOSAkOlCLzptbyIbw2JwWjUPU08k1T/K5u2Mh3UEVafxHE6kW6wJhZ70b596RqMWRXKDbQ4WA==
+"@formatjs/intl-enumerator@1.8.7":
+  version "1.8.7"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-enumerator/-/intl-enumerator-1.8.7.tgz#3f004753333f80cc468ae34046bd8416772a0412"
+  integrity sha512-qd7UlWUivKRJ073btssUqMSqzWW9yN3Ki6EqfCZ6uvIv19mONelE5q3GMmdPWBEjgqZikBzBE2qPTqfrgJ4TCA==
   dependencies:
-    "@formatjs/ecma402-abstract" "2.2.4"
-    "@formatjs/intl-enumerator" "1.8.4"
-    "@formatjs/intl-getcanonicallocales" "2.5.3"
+    "@formatjs/ecma402-abstract" "2.3.1"
     tslib "2"
 
-"@formatjs/intl-localematcher@0.5.8":
-  version "0.5.8"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-localematcher/-/intl-localematcher-0.5.8.tgz#b11bbd04bd3551f7cadcb1ef1e231822d0e3c97e"
-  integrity sha512-I+WDNWWJFZie+jkfkiK5Mp4hEDyRSEvmyfYadflOno/mmKJKcB17fEpEH0oJu/OWhhCJ8kJBDz2YMd/6cDl7Mg==
+"@formatjs/intl-getcanonicallocales@2.5.4":
+  version "2.5.4"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-getcanonicallocales/-/intl-getcanonicallocales-2.5.4.tgz#9b843e1891dea83405c51eb3d00c42ef9cb6cab9"
+  integrity sha512-vSDOsAcc3U+Kl/0b3de8wCQkb3W30H8LUuslyz67wTAHOPSQhPimZyquhwxXpJR+K5yy9CkzTgk5YE5kFT+PFg==
   dependencies:
     tslib "2"
 
-"@formatjs/intl-numberformat@^8.14.5":
-  version "8.14.5"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-numberformat/-/intl-numberformat-8.14.5.tgz#e7f699e7ae4338d758636eeee61952b80bddb755"
-  integrity sha512-UP7Y+t2orvEbFB8EYmmSIbfam1CjhhYWIV7diWBXWilGjrXH7zxIrpgbG22wWwfkEAu8TU8OB/rzIha66Tg1vQ==
+"@formatjs/intl-locale@^4.2.8":
+  version "4.2.8"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-locale/-/intl-locale-4.2.8.tgz#571d44e92b6eb43b7410b37f25e280ec384a32cf"
+  integrity sha512-6RY/npeA0kyoZ8QW0JRAT+VBAFBT6+4ZVeGkKCNIDjbLX2LPuU73emGR35Mbwcc6pquVFrxyo6mXxKNzib0kEA==
   dependencies:
-    "@formatjs/ecma402-abstract" "2.2.4"
-    "@formatjs/intl-localematcher" "0.5.8"
+    "@formatjs/ecma402-abstract" "2.3.1"
+    "@formatjs/intl-enumerator" "1.8.7"
+    "@formatjs/intl-getcanonicallocales" "2.5.4"
     tslib "2"
 
-"@formatjs/intl-pluralrules@^5.3.5":
-  version "5.3.5"
-  resolved "https://registry.yarnpkg.com/@formatjs/intl-pluralrules/-/intl-pluralrules-5.3.5.tgz#df6bb644e9703b5d2466618d412b96cce42be554"
-  integrity sha512-ahtSZ82E5yEVbHAm22jbIOxtB4nPlAS3xMsbdEkwO1ZXEi2mOsiPFpDJ5F5Duq6uSggldHHh1kcKUjDLgGb1vg==
+"@formatjs/intl-localematcher@0.5.9":
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-localematcher/-/intl-localematcher-0.5.9.tgz#43c6ee22be85b83340bcb09bdfed53657a2720db"
+  integrity sha512-8zkGu/sv5euxbjfZ/xmklqLyDGQSxsLqg8XOq88JW3cmJtzhCP8EtSJXlaKZnVO4beEaoiT9wj4eIoCQ9smwxA==
   dependencies:
-    "@formatjs/ecma402-abstract" "2.2.4"
-    "@formatjs/intl-localematcher" "0.5.8"
+    tslib "2"
+
+"@formatjs/intl-numberformat@^8.15.1":
+  version "8.15.1"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-numberformat/-/intl-numberformat-8.15.1.tgz#b2a5b00889ed31dbef9d4e5aeee1dea3d040b068"
+  integrity sha512-NIouSY50xpH/SMJrRbX1Q3hMsGyQmT5MQrta/bOYhpZda1bztOlEYZAKLytk8VGs10wkGz875602mCMhtg4/LA==
+  dependencies:
+    "@formatjs/ecma402-abstract" "2.3.1"
+    "@formatjs/intl-localematcher" "0.5.9"
+    decimal.js "10"
+    tslib "2"
+
+"@formatjs/intl-pluralrules@^5.4.1":
+  version "5.4.1"
+  resolved "https://registry.yarnpkg.com/@formatjs/intl-pluralrules/-/intl-pluralrules-5.4.1.tgz#1c03cd2da449e1871bb7c54ea36fec1de68b7e7e"
+  integrity sha512-kKK4ixTsfKAzyJIVRiJGuw4zd18nEHXiKloYBO9VmLpxrwJTgLQHv2+1hcbxQcwbbo2uc8moUFQuyvxeGEFOfw==
+  dependencies:
+    "@formatjs/ecma402-abstract" "2.3.1"
+    "@formatjs/intl-localematcher" "0.5.9"
+    decimal.js "10"
     tslib "2"
 
 "@gorhom/bottom-sheet@^5.0.6":
@@ -1584,6 +1587,18 @@
   resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-extract-messages/-/babel-plugin-extract-messages-4.14.0.tgz#453b6676292bebdad05016098cd5c0b1ce0fe4cf"
   integrity sha512-lLabYkUsiF0un4ezColFm9Yf23c+efPR/5DRM9cFwW9uZJ5ajN4Ic00dBxJK9HOpy6fpaANnaHFmrm4NScijvQ==
 
+"@lingui/babel-plugin-lingui-macro@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@lingui/babel-plugin-lingui-macro/-/babel-plugin-lingui-macro-5.1.0.tgz#389ca3f7d05f84b279c72c37e7acc1a9ffded26f"
+  integrity sha512-fRkzY6XAL5c7rr1mI3VHzgNzrmRXEjSKG0VZKYt3MsMrbipzzjGYe/1ubNjxeYJqWUIaK4p7qD+bru8N6Ppo6A==
+  dependencies:
+    "@babel/core" "^7.20.12"
+    "@babel/runtime" "^7.20.13"
+    "@babel/types" "^7.20.7"
+    "@lingui/conf" "5.1.0"
+    "@lingui/core" "5.1.0"
+    "@lingui/message-utils" "5.1.0"
+
 "@lingui/cli@4.11.2":
   version "4.11.2"
   resolved "https://registry.yarnpkg.com/@lingui/cli/-/cli-4.11.2.tgz#3d0e828493925315148475ba10ff12b48a5eb26e"
@@ -1678,6 +1693,18 @@
     jiti "^1.17.1"
     lodash.get "^4.4.2"
 
+"@lingui/conf@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@lingui/conf/-/conf-5.1.0.tgz#832abf321f13b46dfa3af677d453d78bdf201a72"
+  integrity sha512-EDILmdZpZ2vXiEEd1eU6aHIm3SqynSzH+X3SkOlO6/j0imT5JAq5XhSLm8mddd2xlvI0CufgGKS8O4XrW3DUIw==
+  dependencies:
+    "@babel/runtime" "^7.20.13"
+    chalk "^4.1.0"
+    cosmiconfig "^8.0.0"
+    jest-validate "^29.4.3"
+    jiti "^1.17.1"
+    lodash.get "^4.4.2"
+
 "@lingui/core@4.11.2":
   version "4.11.2"
   resolved "https://registry.yarnpkg.com/@lingui/core/-/core-4.11.2.tgz#0d9d35e8ac975a6a7c910116e6153c5a49db37f2"
@@ -1694,6 +1721,15 @@
   dependencies:
     "@babel/runtime" "^7.20.13"
     "@lingui/message-utils" "4.14.0"
+    unraw "^3.0.0"
+
+"@lingui/core@5.1.0", "@lingui/core@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@lingui/core/-/core-5.1.0.tgz#579abcf5312ed153985aec072cf507c4ab4e1278"
+  integrity sha512-mjkKvcUMbzmkbyR/JnW4FM56oAnLvVNup1zvKoBQ/kPt+w1rIRCpE0Sr67RY19tlqlAO8ZR2C+IBrUjegSNmSw==
+  dependencies:
+    "@babel/runtime" "^7.20.13"
+    "@lingui/message-utils" "5.1.0"
     unraw "^3.0.0"
 
 "@lingui/format-po@4.11.2":
@@ -1743,6 +1779,14 @@
     "@messageformat/parser" "^5.0.0"
     js-sha256 "^0.10.1"
 
+"@lingui/message-utils@5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@lingui/message-utils/-/message-utils-5.1.0.tgz#a76b4364c70fa8aa9a78a9c8a02ece5c4acb8565"
+  integrity sha512-MKfq4a2QuPK5SfIjo6UI0Hc0r+jaaNu0UxZm23L+3jE8pmnSC+Dr5kIp2MGXmr8ywoGezgYP25sU/nwNE8rmkg==
+  dependencies:
+    "@messageformat/parser" "^5.0.0"
+    js-sha256 "^0.10.1"
+
 "@lingui/metro-transformer@^4.14.0":
   version "4.14.0"
   resolved "https://registry.yarnpkg.com/@lingui/metro-transformer/-/metro-transformer-4.14.0.tgz#038cb7aab6a9ee0a6a7359aa3bca26e535eed19f"
@@ -1753,13 +1797,13 @@
     "@lingui/conf" "4.11.2"
     memoize-one "^6.0.0"
 
-"@lingui/react@^4.14.0":
-  version "4.14.0"
-  resolved "https://registry.yarnpkg.com/@lingui/react/-/react-4.14.0.tgz#7af9dcbd16e98018d8ae3d9b0e4e06b9da2b4224"
-  integrity sha512-20gk22E3RZar4Wcdt/gBtHfi1UZTQvEX5XaCDZF9iAyIlwIWxA+eTquNwg08tYl4Ne6o8jjUGEWcNBJ3ZnlXhg==
+"@lingui/react@^5.1.0":
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/@lingui/react/-/react-5.1.0.tgz#e4a7a9011ca60b9863af882b34d96ce90c8911d9"
+  integrity sha512-XbhcY00I/IFf/CM4nNmPjh69oAgHy5CxafzVrJXQKFkpfnRbO867EgYNv9KXWeSE+BSoxSARejbkPO8oIqxRPQ==
   dependencies:
     "@babel/runtime" "^7.20.13"
-    "@lingui/core" "4.14.0"
+    "@lingui/core" "5.1.0"
 
 "@messageformat/parser@^5.0.0":
   version "5.1.0"
@@ -3192,6 +3236,11 @@ debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2, debug@^4.3.4, debug@^4.3
   integrity sha512-Er2nc/H7RrMXZBFCEim6TCmMk02Z8vLC2Rbi1KEBggpo0fS6l0S1nnapwmIi3yW/+GOJap1Krg4w0Hg80oCqgQ==
   dependencies:
     ms "^2.1.3"
+
+decimal.js@10:
+  version "10.4.3"
+  resolved "https://registry.yarnpkg.com/decimal.js/-/decimal.js-10.4.3.tgz#1044092884d245d1b7f65725fa4ad4c6f781cc23"
+  integrity sha512-VBBaLc1MgL5XpzgIP7ny5Z6Nx3UrRkIViUkPUdtl9aya5amy3De1gsUUSB1g3+3sExYNjCAsAznmukyxCb1GRA==
 
 decode-uri-component@^0.2.2:
   version "0.2.2"
