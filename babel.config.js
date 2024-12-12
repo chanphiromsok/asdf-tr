@@ -14,7 +14,10 @@ module.exports = function (api) {
         },
       ],
     ],
-    plugins: ["macros", "react-native-reanimated/plugin"],
+    plugins: [
+      "@lingui/babel-plugin-lingui-macro",
+      "react-native-reanimated/plugin", //Reanimated must be last
+    ],
     env: {
       production: {
         plugins: ["transform-remove-console"],
