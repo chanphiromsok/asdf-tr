@@ -1,16 +1,30 @@
 import { t, Trans } from "@lingui/macro";
 import { useLingui } from "@lingui/react";
-import { useFocusEffect } from "@react-navigation/native";
+import { useFocusEffect, useNavigation } from "@react-navigation/native";
 
-import React, { useCallback } from "react";
+import React, { useCallback, useLayoutEffect } from "react";
 import { Text, TouchableOpacity, View } from "react-native";
 import { dynamicActivate } from "../../locales/i18n";
 import { AppLanguage } from "../../locales/Language";
 
 const HomeScreen = () => {
+  const navigation = useNavigation();
+
+  useLayoutEffect(() => {
+    navigation.setOptions({
+      headerShown: false,
+    });
+  }, []);
   return (
     <View>
       <Text>HomeScreen</Text>
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("ProfileScreen");
+        }}
+      >
+        <Text>Profile</Text>
+      </TouchableOpacity>
       <Inbox />
     </View>
   );

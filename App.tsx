@@ -1,6 +1,5 @@
 import { getLoadedFonts } from "expo-font";
 import { useEffect } from "react";
-import "react-native-gesture-handler";
 import { KeyboardProvider } from "react-native-keyboard-controller";
 import {
   SafeAreaProvider,

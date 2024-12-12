@@ -5,16 +5,26 @@
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
-    "newArchEnabled": false,
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
     "splash": {
       "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "resizeMode": "contain"
     },
     "ios": {
+      "config": {
+        "usesNonExemptEncryption": false
+      },
       "supportsTablet": true,
       "bundleIdentifier": "com.anonymous.asdftr"
+    },
+    "androidStatusBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#00000000"
+    },
+    "androidNavigationBar": {
+      "barStyle": "light-content",
+      "backgroundColor": "#0f141b"
     },
     "android": {
       "adaptiveIcon": {
