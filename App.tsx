@@ -1,4 +1,3 @@
-import "./global.css";
 import { getLoadedFonts } from "expo-font";
 import { useEffect } from "react";
 import "react-native-gesture-handler";
