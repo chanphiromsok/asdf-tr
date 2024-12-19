@@ -13,7 +13,11 @@ const AppNavigation = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={NavOptions.navigatorOptions}>
         {!accessToken ? (
-          <Stack.Screen name="LoginScreen" component={LoginScreen} />
+          <Stack.Screen
+            options={{ ...NavOptions.largeHeader, headerTitle: "Login" }}
+            name="LoginScreen"
+            component={LoginScreen}
+          />
         ) : (
           <Stack.Screen name="HomeScreen" component={HomeScreen} />
         )}

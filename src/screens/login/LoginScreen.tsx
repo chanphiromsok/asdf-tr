@@ -1,17 +1,25 @@
-import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
-import SecureStore from "../../security/SecureStore";
+import { FlatList, Text, View } from "react-native";
 
 const LoginScreen = () => {
   return (
     <View>
-      <TouchableOpacity
-        onPress={() => {
-          SecureStore.setAccessToken("SSSSSSS");
+      <FlatList
+        data={Array.from({ length: 200 })}
+        renderItem={(data) => {
+          return (
+            <View
+              style={{
+                flex: 1,
+                height: 300,
+                backgroundColor: data.index < 2 ? "blue" : "green",
+              }}
+            >
+              <Text>{data.index}</Text>
+            </View>
+          );
         }}
-      >
-        <Text>LoginScreen</Text>
-      </TouchableOpacity>
+      />
     </View>
   );
 };

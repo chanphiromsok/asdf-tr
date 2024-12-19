@@ -13,16 +13,16 @@ export async function dynamicActivate(locale: AppLanguage) {
   switch (locale) {
     case AppLanguage.km: {
       await Promise.all([
-        import("@formatjs/intl-pluralrules/locale-data/km"),
-        import("@formatjs/intl-numberformat/locale-data/km"),
+        require("@formatjs/intl-pluralrules/locale-data/km"),
+        require("@formatjs/intl-numberformat/locale-data/km"),
       ]);
-      const { messages } = await import(`./km/messages.po`);
+      const { messages } = await require(`./km/messages.po`);
       i18n.loadAndActivate({ locale, messages });
       break;
     }
 
     default: {
-      const { messages } = await import(`./en/messages.po`);
+      const { messages } = await require(`./en/messages.po`);
       i18n.loadAndActivate({ locale, messages });
       break;
     }
