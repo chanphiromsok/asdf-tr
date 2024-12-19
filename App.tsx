@@ -1,5 +1,3 @@
-import { getLoadedFonts } from "expo-font";
-import { useEffect } from "react";
 import "react-native-gesture-handler";
 import { KeyboardProvider } from "react-native-keyboard-controller";
 import {
@@ -10,14 +8,11 @@ import { enableFreeze, enableScreens } from "react-native-screens";
 import AppNavigation from "./src/AppNavigation";
 import QueryProvider from "./src/ctx/QueryProvider";
 import I18nProvider from "./src/locales/i18nProvider";
+import "./unistyles";
 enableScreens();
 enableFreeze();
 
 export default function App() {
-  useEffect(() => {
-    const ggg = getLoadedFonts();
-    console.log("ggg", JSON.stringify(ggg, null, 2));
-  }, []);
   return (
     <QueryProvider>
       <KeyboardProvider>
