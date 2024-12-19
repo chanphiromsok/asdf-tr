@@ -9,7 +9,7 @@ import { AppLanguage } from "../../locales/Language";
 
 const HomeScreen = () => {
   return (
-    <View>
+    <View style={{ backgroundColor: "black", flex: 1 }}>
       <Text>HomeScreen</Text>
       <Inbox />
     </View>
