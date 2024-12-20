@@ -15,6 +15,11 @@ const AppNavigation = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={NavOptions.navigatorOptions}>
         <Stack.Screen
+          options={{ headerTitle: "Login" }}
+          name="LoginScreen"
+          component={LoginScreen}
+        />
+        <Stack.Screen
           options={{
             ...NavOptions.largeHeader,
             headerTitle: "Setting",
@@ -22,13 +27,6 @@ const AppNavigation = () => {
           name="SettingScreen"
           component={SettingScreen}
         />
-
-        <Stack.Screen
-          options={{ ...NavOptions.largeHeader, headerTitle: "Login" }}
-          name="LoginScreen"
-          component={LoginScreen}
-        />
-
         <Stack.Screen name="HomeScreen" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>

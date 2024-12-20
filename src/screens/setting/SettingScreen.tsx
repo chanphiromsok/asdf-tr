@@ -12,7 +12,6 @@ const SettingScreen = () => {
     <ScrollView style={{ ...styles.container, paddingTop: headerHeight }}>
       <Button
         title="Change to Light Theme"
-        color={"#000000"}
         onPress={() => onThemeChange("light")}
       />
       <Button

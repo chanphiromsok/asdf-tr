@@ -3,6 +3,7 @@ import StorageKey from "./src/constant/StorageKey";
 import UnistyleLocalTheme from "./src/persist/theme/UnistyleLocalTheme";
 
 const sharedColors = {
+  primary2: "#f368e0",
   barbie: "#ff9ff3",
   oak: "#1dd1a1",
   sky: "#48dbfb",

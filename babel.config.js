@@ -17,7 +17,12 @@ module.exports = function (api) {
     ],
     plugins: [
       "@lingui/babel-plugin-lingui-macro",
-      "react-native-unistyles/plugin",
+      [
+        "react-native-unistyles/plugin",
+        {
+          debug: true,
+        },
+      ],
       "react-native-reanimated/plugin", //Reanimated must be last
     ],
     env: {
