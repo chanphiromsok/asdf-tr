@@ -1,4 +1,6 @@
 import { StyleSheet } from "react-native-unistyles";
+import StorageKey from "./src/constant/StorageKey";
+import UnistyleLocalTheme from "./src/persist/theme/UnistyleLocalTheme";
 
 const sharedColors = {
   barbie: "#ff9ff3",
@@ -63,7 +65,9 @@ declare module "react-native-unistyles" {
 }
 StyleSheet.configure({
   settings: {
-    adaptiveThemes: true,
+    initialTheme: () => {
+      return UnistyleLocalTheme.getTheme(StorageKey.UnistyleTheme) || "light";
+    },
   },
   breakpoints,
   themes: {

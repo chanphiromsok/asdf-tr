@@ -1,56 +1,56 @@
-import { Trans, useLingui } from "@lingui/react/macro";
 import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
-import { StyleSheet } from "react-native-unistyles";
-import { dynamicActivate } from "../../locales/i18n";
-import { AppLanguage } from "../../locales/Language";
+import { StyleSheet, UnistylesRuntime } from "react-native-unistyles";
+import { AppThemeName } from "react-native-unistyles/lib/typescript/src/specs/types";
 
 export default function TabTwoScreen() {
-  console.log("Render");
-
+  const onThemeChange = (theme: AppThemeName) => {
+    console.log("Before", UnistylesRuntime.hasAdaptiveThemes);
+    if (UnistylesRuntime.hasAdaptiveThemes) {
+      UnistylesRuntime.setAdaptiveThemes(false);
+    }
+    UnistylesRuntime.setTheme(theme);
+  };
   return (
-    <View style={{ backgroundColor: "black", flex: 1 }}>
-      <Text>HomeScreen</Text>
-      <Inbox />
-    </View>
-  );
-}
-const Inbox = () => {
-  const { t } = useLingui();
-  console.log("Render Index");
-
-  // useFocusEffect(
-  //   useCallback(() => {
-  //     dynamicActivate(AppLanguage.km);
-  //   }, [])
-  // );
-  return (
-    <View>
+    <View style={styles.container}>
+      <Text style={styles.text}>HomeScreen</Text>
+      {/* <Inbox /> */}
       <Text style={styles.text}>
-        <Trans id="msg_inbox">Message Inbox</Trans>
+        Color Schema {UnistylesRuntime.colorScheme}
       </Text>
+      <TouchableOpacity onPress={() => onThemeChange("dark")}>
+        <Text style={styles.text}>Dark</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => onThemeChange("light")}>
+        <Text style={styles.text}>Light</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={() => onThemeChange("premium")}>
+        <Text style={styles.text}>System</Text>
+      </TouchableOpacity>
       <TouchableOpacity
         onPress={() => {
-          dynamicActivate(AppLanguage.en);
+          UnistylesRuntime.setAdaptiveThemes(true);
         }}
       >
-        <Text
-          style={{ fontFamily: "SFProDisplay", ...styles.text }}
-        >{t`Mark messages as read`}</Text>
+        <Text style={styles.text}>Adaptive</Text>
       </TouchableOpacity>
     </View>
   );
-};
-const styles = StyleSheet.create((theme) => ({
-  container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: theme.colors.backgroundColor,
-  },
-  text: {
-    fontSize: 20,
-    fontWeight: "bold",
-    color: theme.colors.typography,
-  },
-}));
+}
+const styles = StyleSheet.create((theme) => {
+  console.log("home style");
+
+  return {
+    container: {
+      flex: 1,
+      justifyContent: "center",
+      alignItems: "center",
+      backgroundColor: theme.colors.backgroundColor,
+    },
+    text: {
+      fontSize: 20,
+      fontWeight: "bold",
+      color: theme.colors.typography,
+    },
+  };
+});
