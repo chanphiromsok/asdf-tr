@@ -32,9 +32,9 @@ const TextController = ({ control, name, ...props }: Props) => {
 export default TextController;
 const styles = StyleSheet.create((theme) => ({
   container: {
-    backgroundColor: theme.colors.backgroundColor,
-    color: theme.colors.typography,
-    borderColor: theme.colors.accent,
+    backgroundColor: theme.colors.bgColor,
+    color: theme.colors.text,
+    borderColor: theme.colors.borderColor,
     borderWidth: 1,
     borderRadius: 5,
     padding: 10,

@@ -16,20 +16,8 @@ type VStackProps = PropsWithChildren<{
 const VStack = ({ children, ...props }: VStackProps) => {
   const flex =
     typeof props.flex === "boolean" ? (props.flex ? 1 : undefined) : props.flex;
-  // Not working this one (Toggle appearance)
-  // const mergedStyles = [styles.container(flex, props.bgColor), styles.box];
-
-  //  working this one (Toggle appearance)
   return (
-    <View
-      style={[
-        styles.container({
-          bgColor: props.bgColor,
-          flex,
-        }),
-        styles.box,
-      ]}
-    >
+    <View style={[styles.container({ bgColor: props.bgColor, flex })]}>
       {children}
     </View>
   );
@@ -43,10 +31,6 @@ type Props = {
 const styles = StyleSheet.create((theme) => ({
   container: ({ bgColor, flex }: Props) => ({
     flex,
-    backgroundColor: bgColor ? bgColor : theme.colors.backgroundColor,
+    backgroundColor: bgColor ? bgColor : theme.colors.bgColor,
   }),
-  box: {
-    borderWidth: 1,
-    borderColor: "black",
-  },
 }));
