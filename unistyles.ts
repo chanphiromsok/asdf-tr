@@ -7,6 +7,7 @@ const lightTheme = {
   colors: {
     ...colors.status,
     bgColor: colors.white,
+    btnBg: colors.black,
     borderColor: colors.gray3,
     text: colors.black,
     textButton: colors.white,
@@ -17,6 +18,7 @@ const darkTheme = {
   colors: {
     ...colors.status,
     bgColor: colors.black,
+    btnBg: colors.white,
     borderColor: colors.gray3,
     text: colors.white,
     textButton: colors.black,
@@ -27,6 +29,7 @@ const dimTheme = {
   colors: {
     ...colors.status,
     bgColor: colors.gray5,
+    btnBg: colors.gray1,
     borderColor: colors.gray3,
     text: colors.gray1,
     textButton: colors.gray1,
