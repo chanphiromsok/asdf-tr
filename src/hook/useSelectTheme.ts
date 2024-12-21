@@ -1,3 +1,4 @@
+import { Platform } from "react-native";
 import { UnistylesRuntime } from "react-native-unistyles";
 import { AppThemeName } from "react-native-unistyles/lib/typescript/src/specs/types";
 
@@ -9,7 +10,9 @@ const useSelectTheme = () => {
     UnistylesRuntime.setTheme(theme);
   };
   const onSelectAdaptiveTheme = () => {
-    UnistylesRuntime.setAdaptiveThemes(true);
+    if (Platform.OS !== "web") {
+      UnistylesRuntime.setAdaptiveThemes(true);
+    }
   };
   return {
     onThemeChange,

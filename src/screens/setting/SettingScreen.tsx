@@ -1,7 +1,6 @@
 import { useHeaderHeight } from "@react-navigation/elements";
 import React from "react";
-import { Button, ScrollView } from "react-native";
-import View from "react-native/Libraries/Components/View/ViewNativeComponent";
+import { Button, ScrollView, View } from "react-native";
 import useSelectTheme from "../../hook/useSelectTheme";
 import styles from "./styles";
 
@@ -20,7 +19,7 @@ const SettingScreen = () => {
       />
       <Button
         title="Change to Premium Theme"
-        onPress={() => onThemeChange("premium")}
+        onPress={() => onThemeChange("dim")}
       />
       <Button
         title="Change to Adaptive Theme"
@@ -28,12 +27,7 @@ const SettingScreen = () => {
       />
 
       {Array.from({ length: 1000 }).map((_, index) => (
-        <View
-          style={styles.box}
-          key={index}
-          title={`Button ${index}`}
-          onPress={() => {}}
-        />
+        <View style={styles.box} key={index} />
       ))}
     </ScrollView>
   );

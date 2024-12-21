@@ -36,15 +36,15 @@ const dimTheme = {
   },
 };
 
-// const breakpoints = {
-//   xs: 0,
-//   sm: 300,
-//   md: 500,
-//   lg: 800,
-//   xl: 1200,
-// };
+const breakpoints = {
+  xs: 0,
+  sm: 300,
+  md: 500,
+  lg: 800,
+  xl: 1200,
+};
 
-// type AppBreakpoints = typeof breakpoints;
+type AppBreakpoints = typeof breakpoints;
 type AppThemes = {
   light: typeof lightTheme;
   dark: typeof darkTheme;
@@ -53,7 +53,7 @@ type AppThemes = {
 
 declare module "react-native-unistyles" {
   export interface UnistylesThemes extends AppThemes {}
-  // export interface UnistylesBreakpoints extends AppBreakpoints {}
+  export interface UnistylesBreakpoints extends AppBreakpoints {}
 }
 StyleSheet.configure({
   settings: {
@@ -61,7 +61,7 @@ StyleSheet.configure({
       return UnistyleLocalTheme.getTheme(StorageKey.UnistyleTheme) || "light";
     },
   },
-  // breakpoints,
+  breakpoints,
   themes: {
     light: lightTheme,
     dark: darkTheme,
